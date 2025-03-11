@@ -1,0 +1,23 @@
+import os
+
+os.system ("cls")
+
+peso = float(input("Qual e seu peso (Kg) ")) 
+altura = float(input("Qual e sua altura (m)"))
+imc = peso / (altura ** 2)
+print("O imc dessa pessoa é de {:.1f}".format(imc))
+
+if imc < 16.9:
+    print("Voce esta muito abaixo do pesso normal")
+elif imc >= 17 and imc < 18.4:
+    print("Voce esta abaixo do peso") 
+elif imc>= 18.5 and imc <= 24.9:
+    print("voce esta na faixa de peso normal ")
+elif imc>=25 and imc<= 29.9:
+    print("Vce esta acima do peso ")
+elif imc >= 30 and imc <= 34.9:
+    print("voce esta com obesidade nivel 1 ")
+elif imc >= 35 and imc <= 40:
+    print("voce esta com obesidade nivel 2")
+elif imc > 40:
+    print("Voce esta com obesidade nivel 3")
