@@ -1,0 +1,29 @@
+import os
+#limpar tela
+os.system("cls")
+print("=====DESCONTO======")
+
+produto = input("Digite o nome do produto: ")
+quantidade = int(input("Digite a quantidade de produtos: "))
+preço = float(input("Digite o preço do produto: "))
+
+total = quantidade * preço
+
+# Verificando a quantidade para aplicar o desconto correto
+if quantidade <= 5:
+    desconto01 = total * 0.2  # Desconto de 20%
+    print("Desconto de 20%")
+    total_pagar = total - desconto01
+    print("Total a pagar:", total_pagar)
+
+elif 5 < quantidade <= 10:
+    desconto02 = total * 0.3  # Desconto de 30%
+    print("Desconto de 30%")
+    total_pagar = total - desconto02
+    print("Total a pagar:", total_pagar)
+
+else:
+    desconto03 = total * 0.5  # Desconto de 50%
+    print("Desconto de 50%")
+    total_pagar = total - desconto03
+    print("Total a pagar:", total_pagar)
